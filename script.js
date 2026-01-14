@@ -75,7 +75,7 @@ function initBookingForms() {
             const whatsappMessage = `Hello! I'd like to book a dental appointment at Nivali Dental Clinic.%0A%0AName: ${name}%0AEmail: ${email}%0APhone: ${phone}%0AService: ${service}%0ADate: ${formattedDate}%0ATime: ${time}`;
             
             // Open WhatsApp with pre-filled message
-            window.open(`https://wa.me/254117702463?text=${whatsappMessage}`, '_blank');
+            window.open(`https://wa.me/254718611236?text=${whatsappMessage}`, '_blank');
             
             // Show confirmation message
             showAlert('Redirecting to WhatsApp to confirm your appointment...', 'success');
@@ -239,4 +239,5 @@ document.addEventListener('DOMContentLoaded', function() {
     if (document.getElementById('dentistsGrid')) {
         loadStaffForPublic();
     }
+
 });
