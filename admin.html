@@ -1,0 +1,347 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Admin Dashboard - Nivali Dental Clinic 2026</title>
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.0/css/all.min.css">
+    <link href="https://fonts.googleapis.com/css2?family=Poppins:wght@300;400;500;600;700&family=Open+Sans:wght@300;400;600&display=swap" rel="stylesheet">
+    <link rel="stylesheet" href="style.css">
+    <style>
+        .admin-container {
+            max-width: 1200px;
+            margin: 0 auto;
+            padding: 20px;
+        }
+        
+        .admin-nav {
+            background-color: var(--dark);
+            color: white;
+            padding: 15px 0;
+            margin-bottom: 30px;
+        }
+        
+        .admin-nav-container {
+            display: flex;
+            justify-content: space-between;
+            align-items: center;
+            max-width: 1200px;
+            margin: 0 auto;
+            padding: 0 20px;
+        }
+        
+        .admin-nav-links a {
+            color: white;
+            margin-left: 20px;
+            text-decoration: none;
+        }
+        
+        .admin-nav-links a:hover {
+            color: var(--primary-light);
+        }
+    </style>
+</head>
+<body>
+    <!-- Admin Navigation -->
+    <nav class="admin-nav">
+        <div class="admin-nav-container">
+            <div class="logo">
+                <div class="logo-icon">
+                    <i class="fas fa-tooth"></i>
+                </div>
+                <div class="logo-text">Nivali<span>Admin</span></div>
+            </div>
+            <div class="admin-nav-links">
+                <span>Welcome, Admin</span>
+                <a href="index.html"><i class="fas fa-home"></i> View Site</a>
+                <a href="#" id="adminLogoutBtn"><i class="fas fa-sign-out-alt"></i> Logout</a>
+            </div>
+        </div>
+    </nav>
+
+    <!-- Admin Dashboard -->
+    <div class="admin-container">
+        <div class="admin-header">
+            <h1>Admin Dashboard</h1>
+            <p>Last login: <span id="lastLoginTime">Just now</span></p>
+        </div>
+        
+        <!-- Admin Statistics -->
+        <div class="admin-stats">
+            <div class="stat-card">
+                <h3 id="totalStaff">0</h3>
+                <p>Staff Members</p>
+            </div>
+            <div class="stat-card">
+                <h3 id="todayAppointments">0</h3>
+                <p>Today's Appointments</p>
+            </div>
+            <div class="stat-card">
+                <h3 id="totalAppointments">0</h3>
+                <p>Total Appointments</p>
+            </div>
+            <div class="stat-card">
+                <h3>2026</h3>
+                <p>Current Year</p>
+            </div>
+        </div>
+        
+        <!-- Quick Actions -->
+        <div class="dashboard-grid">
+            <div class="dashboard-card">
+                <h3><i class="fas fa-users" style="color: var(--primary); margin-right: 10px;"></i> Staff Management</h3>
+                <p>Add, edit, or remove staff members from the website.</p>
+                <div class="admin-actions">
+                    <button class="btn" onclick="document.getElementById('staffManagement').scrollIntoView()">
+                        <i class="fas fa-user-md"></i> Manage Staff
+                    </button>
+                </div>
+            </div>
+            
+            <div class="dashboard-card">
+                <h3><i class="fas fa-calendar-check" style="color: var(--secondary); margin-right: 10px;"></i> Appointments</h3>
+                <p>View and manage patient appointments.</p>
+                <div class="admin-actions">
+                    <button class="btn btn-secondary" onclick="alert('Appointment management coming soon!')">
+                        <i class="fas fa-eye"></i> View Appointments
+                    </button>
+                </div>
+            </div>
+            
+            <div class="dashboard-card">
+                <h3><i class="fas fa-cog" style="color: var(--dark); margin-right: 10px;"></i> Website Settings</h3>
+                <p>Update clinic information and website settings.</p>
+                <div class="admin-actions">
+                    <button class="btn btn-outline" onclick="alert('Settings panel coming soon!')">
+                        <i class="fas fa-sliders-h"></i> Settings
+                    </button>
+                </div>
+            </div>
+        </div>
+        
+        <!-- Staff Management Section -->
+        <div id="staffManagement" class="staff-management" style="margin-top: 50px;">
+            <h2><i class="fas fa-user-md" style="margin-right: 10px;"></i> Staff Management</h2>
+            <p>Add and manage dental team members. Changes will appear on the public website immediately.</p>
+            
+            <!-- Add New Staff Form -->
+            <div class="staff-form-admin">
+                <h3>Add New Staff Member</h3>
+                <form id="staffForm">
+                    <div class="form-row">
+                        <div class="form-group">
+                            <label for="staffName">Full Name *</label>
+                            <input type="text" id="staffName" class="form-control" placeholder="Dr. First Last" required>
+                        </div>
+                        <div class="form-group">
+                            <label for="staffPosition">Position *</label>
+                            <input type="text" id="staffPosition" class="form-control" placeholder="General Dentist, Orthodontist, etc." required>
+                        </div>
+                    </div>
+                    
+                    <div class="form-group">
+                        <label for="staffExperience">Years of Experience</label>
+                        <input type="text" id="staffExperience" class="form-control" placeholder="e.g., 10+ years">
+                    </div>
+                    
+                    <div class="form-group">
+                        <label for="staffBio">Bio/Description *</label>
+                        <textarea id="staffBio" class="form-control" rows="3" placeholder="Brief professional bio and qualifications..." required></textarea>
+                    </div>
+                    
+                    <div class="form-group">
+                        <label for="staffSpecialties">Specialties (comma separated)</label>
+                        <input type="text" id="staffSpecialties" class="form-control" placeholder="General Dentistry, Cosmetic Dentistry, Orthodontics, etc.">
+                    </div>
+                    
+                    <div class="form-actions">
+                        <button type="button" id="addStaffBtn" class="btn" onclick="addStaffMember()">
+                            <i class="fas fa-user-plus"></i> Add Staff Member
+                        </button>
+                        <button type="reset" class="btn btn-outline">
+                            <i class="fas fa-redo"></i> Clear Form
+                        </button>
+                    </div>
+                </form>
+            </div>
+            
+            <!-- Current Staff Table -->
+            <div style="margin-top: 40px;">
+                <h3>Current Staff Members</h3>
+                <div class="staff-table-container">
+                    <table class="staff-table">
+                        <thead>
+                            <tr>
+                                <th>Name</th>
+                                <th>Position</th>
+                                <th>Specialties</th>
+                                <th>Experience</th>
+                                <th>Actions</th>
+                            </tr>
+                        </thead>
+                        <tbody id="staffTableBody">
+                            <!-- Staff rows will be loaded here -->
+                        </tbody>
+                    </table>
+                </div>
+                
+                <!-- Default Staff Button -->
+                <div style="text-align: center; margin-top: 30px;">
+                    <button class="btn btn-secondary" onclick="loadDefaultStaff()">
+                        <i class="fas fa-bolt"></i> Load Default Staff (Demo)
+                    </button>
+                    <p style="margin-top: 10px; color: var(--gray); font-size: 14px;">
+                        This will load 6 sample staff members for demonstration.
+                    </p>
+                </div>
+            </div>
+        </div>
+        
+        <!-- Admin Footer -->
+        <div style="margin-top: 60px; padding-top: 20px; border-top: 1px solid var(--light-gray); text-align: center; color: var(--gray);">
+            <p>Nivali Dental Clinic Admin Panel • <span id="currentYear">2026</span> • Secure Access Only</p>
+            <p style="font-size: 12px; margin-top: 5px;">
+                <i class="fas fa-shield-alt"></i> Admin session will expire after 24 hours of inactivity
+            </p>
+        </div>
+    </div>
+
+    <!-- Admin Login Modal (for when session expires) -->
+    <div class="modal" id="adminLoginModal">
+        <div class="modal-content admin-login-modal">
+            <button class="close-modal" onclick="closeAdminLogin()">&times;</button>
+            <div class="confirmation">
+                <div class="service-icon" style="margin: 0 auto 20px;">
+                    <i class="fas fa-lock"></i>
+                </div>
+                <h2>Admin Login Required</h2>
+                <p>Please enter your admin credentials to access this page.</p>
+                
+                <div id="loginAlert" class="alert login-alert"></div>
+                
+                <form id="adminLoginForm" class="login-form">
+                    <div class="form-group">
+                        <label for="adminUsername">Username</label>
+                        <input type="text" id="adminUsername" class="form-control" placeholder="Enter username" required>
+                    </div>
+                    
+                    <div class="form-group">
+                        <label for="adminPassword">Password</label>
+                        <input type="password" id="adminPassword" class="form-control" placeholder="Enter password" required>
+                    </div>
+                    
+                    <div class="form-group">
+                        <label for="clinicCode">Clinic Code</label>
+                        <input type="text" id="clinicCode" class="form-control" placeholder="Enter clinic code" required>
+                        <small style="color: var(--gray);">Hint: Clinic name + year (e.g., NIVALI2026)</small>
+                    </div>
+                    
+                    <button type="submit" class="btn" style="width: 100%;">
+                        <i class="fas fa-sign-in-alt"></i> Login to Admin Panel
+                    </button>
+                </form>
+                
+                <p style="margin-top: 20px; color: var(--gray); font-size: 14px;">
+                    <i class="fas fa-info-circle"></i> Contact system administrator if you've forgotten your credentials.
+                </p>
+            </div>
+        </div>
+    </div>
+
+    <script src="script.js"></script>
+    <script>
+        // Check if admin is logged in, otherwise show login
+        document.addEventListener('DOMContentLoaded', function() {
+            if (!isAdminLoggedIn()) {
+                showAdminLogin();
+            } else {
+                // Update last login time
+                const lastLogin = localStorage.getItem('adminLastLogin');
+                if (lastLogin) {
+                    const time = new Date(lastLogin).toLocaleString();
+                    document.getElementById('lastLoginTime').textContent = time;
+                }
+                
+                // Set current year
+                document.getElementById('currentYear').textContent = new Date().getFullYear();
+                
+                // Load staff data
+                loadSavedStaff();
+                updateAdminStats();
+            }
+        });
+        
+        // Load default staff for demo
+        function loadDefaultStaff() {
+            const defaultStaff = [
+                {
+                    name: "Dr. Sarah Johnson",
+                    position: "General Dentist",
+                    bio: "With over 15 years of experience in general and cosmetic dentistry, Dr. Johnson specializes in smile makeovers and preventive care.",
+                    experience: "15+ years",
+                    specialties: ["General Dentistry", "Cosmetic Dentistry", "Preventive Care"]
+                },
+                {
+                    name: "Dr. Michael Chen",
+                    position: "Orthodontist",
+                    bio: "Specializing in orthodontics for 12 years, Dr. Chen is certified in Invisalign and modern braces technology for all ages.",
+                    experience: "12+ years",
+                    specialties: ["Braces", "Invisalign", "Orthodontics"]
+                },
+                {
+                    name: "Dr. Amanda Rodriguez",
+                    position: "Oral Surgeon",
+                    bio: "Expert in dental implants, extractions, and oral surgery with 10 years of surgical experience and advanced training.",
+                    experience: "10+ years",
+                    specialties: ["Dental Implants", "Oral Surgery", "Extractions"]
+                },
+                {
+                    name: "Dr. James Wilson",
+                    position: "Pediatric Dentist",
+                    bio: "Specialized in dental care for children and teenagers with a focus on creating positive dental experiences for young patients.",
+                    experience: "8+ years",
+                    specialties: ["Pediatric Dentistry", "Preventive Care", "Child Dentistry"]
+                },
+                {
+                    name: "Dr. Lisa Park",
+                    position: "Periodontist",
+                    bio: "Specializes in gum health, periodontal treatments, and dental implant placement with a focus on comprehensive gum care.",
+                    experience: "9+ years",
+                    specialties: ["Gum Treatment", "Periodontics", "Dental Implants"]
+                },
+                {
+                    name: "Dr. Robert Kim",
+                    position: "Endodontist",
+                    bio: "Expert in root canal therapy and saving damaged teeth using advanced dental microscope technology for precise treatments.",
+                    experience: "11+ years",
+                    specialties: ["Root Canal", "Endodontics", "Tooth Preservation"]
+                }
+            ];
+            
+            saveStaff(defaultStaff);
+            loadSavedStaff();
+            updateAdminStats();
+            showAlert('Default staff members loaded successfully!', 'success');
+        }
+        
+        // Alert function for admin page
+        function showAlert(message, type) {
+            const alertDiv = document.getElementById('loginAlert') || (() => {
+                const div = document.createElement('div');
+                div.id = 'loginAlert';
+                div.className = `alert alert-${type}`;
+                document.querySelector('.login-form').insertBefore(div, document.querySelector('.login-form').firstChild);
+                return div;
+            })();
+            
+            alertDiv.textContent = message;
+            alertDiv.className = `alert alert-${type}`;
+            alertDiv.style.display = 'block';
+            
+            setTimeout(() => {
+                alertDiv.style.display = 'none';
+            }, 5000);
+        }
+    </script>
+</body>
+</html>

@@ -1,0 +1,278 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Nivali Dental Clinic - Quality Dental Care Since 2018</title>
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.0/css/all.min.css">
+    <link href="https://fonts.googleapis.com/css2?family=Poppins:wght@300;400;500;600;700&family=Open+Sans:wght@300;400;600&display=swap" rel="stylesheet">
+    <link rel="stylesheet" href="style.css">
+</head>
+<body>
+    <!-- Header -->
+    <header>
+        <div class="container header-container">
+            <a href="index.html" class="logo">
+                <div class="logo-icon">
+                    <i class="fas fa-tooth"></i>
+                </div>
+                <div class="logo-text">Nivali<span>Dental</span></div>
+            </a>
+            
+            <button class="mobile-menu-btn" id="mobileMenuBtn">
+                <i class="fas fa-bars"></i>
+            </button>
+            
+            <nav class="desktop-nav">
+                <ul>
+                    <li><a href="index.html" class="active">Home</a></li>
+                    <li><a href="services.html">Services</a></li>
+                    <li><a href="dentists.html">Our Team</a></li>
+                    <li><a href="booking.html">Book Appointment</a></li>
+                    <li><a href="contact.html">Contact</a></li>
+                    <li><a href="booking.html" class="nav-cta">Book Now</a></li>
+                </ul>
+            </nav>
+        </div>
+        
+        <div class="mobile-menu" id="mobileMenu">
+            <ul>
+                <li><a href="index.html" class="active">Home</a></li>
+                <li><a href="services.html">Services</a></li>
+                <li><a href="dentists.html">Our Team</a></li>
+                <li><a href="booking.html">Book Appointment</a></li>
+                <li><a href="contact.html">Contact</a></li>
+                <li><a href="booking.html" class="nav-cta">Book Now</a></li>
+            </ul>
+        </div>
+    </header>
+
+    <!-- Hero Section -->
+    <section class="hero">
+        <div class="container hero-container">
+            <div class="hero-content">
+                <h1>Advanced Dental Care <span>Since 2018</span></h1>
+                <p>At Nivali Dental Clinic, we've been providing exceptional dental care for 8 years. Our 2026 clinic features the latest dental technology for comfortable, effective treatments.</p>
+                <div class="hero-buttons">
+                    <a href="booking.html" class="btn">Book Appointment</a>
+                    <a href="services.html" class="btn btn-secondary" style="margin-left: 10px;">Our Services</a>
+                </div>
+            </div>
+            <div class="hero-image">
+                <div class="booking-form">
+                    <h3>Quick Appointment</h3>
+                    <p>Fill out the form to schedule your visit</p>
+                    <form id="bookingForm">
+                        <div class="form-group">
+                            <label for="name">Full Name</label>
+                            <input type="text" id="name" class="form-control" placeholder="Your full name" required>
+                        </div>
+                        <div class="form-group">
+                            <label for="phone">Phone Number</label>
+                            <input type="tel" id="phone" class="form-control" placeholder="Your phone number" required>
+                        </div>
+                        <div class="form-group">
+                            <label for="service">Service Required</label>
+                            <select id="service" class="form-control" required>
+                                <option value="">Select a service</option>
+                                <option value="general-checkup">General Checkup</option>
+                                <option value="teeth-cleaning">Teeth Cleaning</option>
+                                <option value="teeth-whitening">Teeth Whitening</option>
+                                <option value="dental-fillings">Dental Fillings</option>
+                                <option value="root-canal">Root Canal Treatment</option>
+                                <option value="dental-implants">Dental Implants</option>
+                                <option value="braces">Braces & Orthodontics</option>
+                            </select>
+                        </div>
+                        <div class="form-row">
+                            <div class="form-group">
+                                <label for="date">Preferred Date</label>
+                                <input type="date" id="date" class="form-control" required>
+                            </div>
+                            <div class="form-group">
+                                <label for="time">Preferred Time</label>
+                                <select id="time" class="form-control" required>
+                                    <option value="">Select time</option>
+                                    <option value="9:00 AM">9:00 AM</option>
+                                    <option value="10:00 AM">10:00 AM</option>
+                                    <option value="11:00 AM">11:00 AM</option>
+                                    <option value="2:00 PM">2:00 PM</option>
+                                    <option value="3:00 PM">3:00 PM</option>
+                                    <option value="4:00 PM">4:00 PM</option>
+                                </select>
+                            </div>
+                        </div>
+                        <button type="submit" class="btn" style="width: 100%;">Book Appointment</button>
+                    </form>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- Services Preview -->
+    <section class="section">
+        <div class="container">
+            <div class="section-title">
+                <h2>2026 Dental Technology</h2>
+                <p>We offer advanced dental services using the latest 2026 technology for pain-free, efficient treatments.</p>
+            </div>
+            
+            <div class="services-grid">
+                <div class="service-card">
+                    <div class="service-icon">
+                        <i class="fas fa-robot"></i>
+                    </div>
+                    <h3>AI-Assisted Dentistry</h3>
+                    <p>Our 2026 AI systems help diagnose dental issues with 99% accuracy and create personalized treatment plans.</p>
+                    <a href="services.html#ai-dentistry" style="color: var(--primary); font-weight: 600; margin-top: 15px; display: inline-block;">Learn More →</a>
+                </div>
+                
+                <div class="service-card">
+                    <div class="service-icon">
+                        <i class="fas fa-microscope"></i>
+                    </div>
+                    <h3>Laser Dentistry</h3>
+                    <p>Pain-free treatments using advanced laser technology for precise, bloodless procedures and faster healing.</p>
+                    <a href="services.html#laser-dentistry" style="color: var(--primary); font-weight: 600; margin-top: 15px; display: inline-block;">Learn More →</a>
+                </div>
+                
+                <div class="service-card">
+                    <div class="service-icon">
+                        <i class="fas fa-print"></i>
+                    </div>
+                    <h3>3D Printed Solutions</h3>
+                    <p>Same-day crowns, bridges, and dentures created with in-office 3D printing technology for immediate results.</p>
+                    <a href="services.html#3d-printing" style="color: var(--primary); font-weight: 600; margin-top: 15px; display: inline-block;">Learn More →</a>
+                </div>
+            </div>
+            
+            <div style="text-align: center; margin-top: 40px;">
+                <a href="services.html" class="btn">View All Services</a>
+            </div>
+        </div>
+    </section>
+
+    <!-- Why Choose Us -->
+    <section class="section" style="background-color: var(--light);">
+        <div class="container">
+            <div class="section-title">
+                <h2>Why Choose Nivali Dental in 2026?</h2>
+                <p>Experience the future of dental care with our patient-centered approach and cutting-edge technology.</p>
+            </div>
+            
+            <div class="services-grid">
+                <div class="service-card">
+                    <div class="service-icon" style="background-color: #e8f5e9;">
+                        <i class="fas fa-calendar-alt" style="color: var(--secondary);"></i>
+                    </div>
+                    <h3>8 Years of Excellence</h3>
+                    <p>Since 2018, we've been providing trusted dental care to thousands of satisfied patients in our community.</p>
+                </div>
+                
+                <div class="service-card">
+                    <div class="service-icon" style="background-color: #e3f2fd;">
+                        <i class="fas fa-bolt" style="color: var(--primary);"></i>
+                    </div>
+                    <h3>Same-Day Results</h3>
+                    <p>With our advanced 2026 technology, many treatments can be completed in a single visit for your convenience.</p>
+                </div>
+                
+                <div class="service-card">
+                    <div class="service-icon" style="background-color: #fff3e0;">
+                        <i class="fas fa-shield-alt" style="color: #ff9800;"></i>
+                    </div>
+                    <h3>Enhanced Safety</h3>
+                    <p>Our clinic follows the latest 2026 sterilization protocols and uses disposable instruments for maximum safety.</p>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- Footer -->
+   <!-- Footer -->
+<footer>
+    <div class="container">
+        <div class="footer-container">
+            <div class="footer-col">
+                <a href="index.html" class="logo" style="margin-bottom: 20px; display: inline-flex;">
+                    <div class="logo-icon">
+                        <i class="fas fa-tooth"></i>
+                    </div>
+                    <div class="logo-text">Nivali<span>Dental</span></div>
+                </a>
+                <p>Providing exceptional dental care with cutting-edge 2026 technology. Serving Ruaraka and Thika Road area since 2018.</p>
+            </div>
+            
+            <div class="footer-col">
+                <h3>Quick Links</h3>
+                <ul>
+                    <li><a href="index.html">Home</a></li>
+                    <li><a href="services.html">Our Services</a></li>
+                    <li><a href="dentists.html">Our Team</a></li>
+                    <li><a href="booking.html">Book Appointment</a></li>
+                    <li><a href="contact.html">Contact Us</a></li>
+                </ul>
+            </div>
+            
+            <div class="footer-col">
+                <h3>Clinic Location</h3>
+                <ul class="contact-info-list">
+                    <li>
+                        <i class="fas fa-map-marker-alt"></i>
+                        <span>Total Energies Petrol Station<br>Ruaraka, Opposite Safari Park Hotel<br>Thika Road, 1st Floor, Room F14</span>
+                    </li>
+                    <li>
+                        <i class="fas fa-phone"></i>
+                        <span>(254) 718611236 </span>
+                    </li>
+                    <li>
+                        <i class="fab fa-whatsapp"></i>
+                        <span>+254 718 611 236</span>
+                    </li>
+                    <li>
+                        <i class="fas fa-envelope"></i>
+                        <span>nivalidental@gmail.com</span>
+                    </li>
+                </ul>
+            </div>
+            
+            <div class="footer-col">
+                <h3>Clinic Hours</h3>
+                <ul style="list-style: none; color: #cbd5e0;">
+                    <li style="margin-bottom: 8px; display: flex; justify-content: space-between;">
+                        <span>Monday - Friday</span>
+                        <span>8:00 AM - 7:00 PM</span>
+                    </li>
+                    <li style="margin-bottom: 8px; display: flex; justify-content: space-between;">
+                        <span>Saturday</span>
+                        <span>9:00 AM - 5:00 PM</span>
+                    </li>
+                    <li style="display: flex; justify-content: space-between;">
+                        <span>Sunday</span>
+                        <span style="color: var(--accent);">Emergency Only</span>
+                    </li>
+                </ul>
+                <div style="margin-top: 20px;">
+                    <a href="booking.html" class="btn" style="width: 100%; text-align: center;">
+                        <i class="fas fa-calendar-check"></i> Book Appointment
+                    </a>
+                </div>
+            </div>
+        </div>
+        
+        <div class="copyright">
+            <p>&copy; <span class="current-year">2026</span> Nivali Dental Clinic. All rights reserved. Established 2018.</p>
+            <p style="margin-top: 10px; font-size: 12px; color: #718096;">
+                <i class="fas fa-map-marker-alt"></i> Located at Total Energies Petrol Station, Ruaraka | Opposite Safari Park Hotel, Thika Road
+            </p>
+        </div>
+    </div>
+</footer>
+    <!-- WhatsApp Floating Button -->
+    <a href="https://wa.me/254718611236" class="whatsapp-float" target="_blank">
+        <i class="fab fa-whatsapp"></i>
+    </a>
+
+    <script src="script.js"></script>
+</body>
+</html>

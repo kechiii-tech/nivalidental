@@ -1,0 +1,394 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Contact Us - Nivali Dental Clinic 2026</title>
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.0/css/all.min.css">
+    <link href="https://fonts.googleapis.com/css2?family=Poppins:wght@300;400;500;600;700&family=Open+Sans:wght@300;400;600&display=swap" rel="stylesheet">
+    <link rel="stylesheet" href="style.css">
+</head>
+<body>
+    <!-- Header -->
+    <header>
+        <div class="container header-container">
+            <a href="index.html" class="logo">
+                <div class="logo-icon">
+                    <i class="fas fa-tooth"></i>
+                </div>
+                <div class="logo-text">Nivali<span>Dental</span></div>
+            </a>
+            
+            <button class="mobile-menu-btn" id="mobileMenuBtn">
+                <i class="fas fa-bars"></i>
+            </button>
+            
+            <nav class="desktop-nav">
+                <ul>
+                    <li><a href="index.html">Home</a></li>
+                    <li><a href="services.html">Services</a></li>
+                    <li><a href="dentists.html">Our Team</a></li>
+                    <li><a href="booking.html">Book Appointment</a></li>
+                    <li><a href="contact.html" class="active">Contact</a></li>
+                    <li><a href="booking.html" class="nav-cta">Book Now</a></li>
+                </ul>
+            </nav>
+        </div>
+        
+        <div class="mobile-menu" id="mobileMenu">
+            <ul>
+                <li><a href="index.html">Home</a></li>
+                <li><a href="services.html">Services</a></li>
+                <li><a href="dentists.html">Our Team</a></li>
+                <li><a href="booking.html">Book Appointment</a></li>
+                <li><a href="contact.html" class="active">Contact</a></li>
+                <li><a href="booking.html" class="nav-cta">Book Now</a></li>
+            </ul>
+        </div>
+    </header>
+
+    <!-- Page Hero -->
+    <section class="hero" style="padding: 100px 0 60px;">
+        <div class="container">
+            <div class="hero-content" style="text-align: center; max-width: 800px; margin: 0 auto;">
+                <h1>Contact Nivali Dental Clinic</h1>
+                <p>We're here to answer your questions and help you schedule your dental appointment. Reach out to us through any of our 2026 contact methods below.</p>
+            </div>
+        </div>
+    </section>
+
+    <!-- Contact Section -->
+    <!-- Contact Section -->
+<section class="section">
+    <div class="container">
+        <div class="contact-info">
+            <div class="contact-card">
+                <i class="fas fa-map-marker-alt"></i>
+                <h3>Visit Our Clinic</h3>
+                <p>Total Energies Petrol Station<br>Ruaraka, Opposite Safari Park Hotel<br>Thika Road, 1st Floor, Room F14<br>Nairobi, Kenya</p>
+                <a href="https://goo.gl/maps/SafariParkHotelRuaraka" class="btn" style="margin-top: 20px;" target="_blank">
+                    <i class="fas fa-directions" style="margin-right: 8px;"></i> Get Directions
+                </a>
+            </div>
+            
+            <div class="contact-card">
+                <i class="fas fa-phone-alt"></i>
+                <h3>Call Us</h3>
+                <p>Clinic Line: (254) 718-611236<br>Mobile: +254 718 611 236<br>Emergency: +254 718 611 236</p>
+                <p style="margin-top: 15px; font-size: 14px;">Monday - Friday: 8am-7pm<br>Saturday: 9am-5pm</p>
+                <a href="tel:+254718611236" class="btn" style="margin-top: 20px;">
+                    <i class="fas fa-phone" style="margin-right: 8px;"></i> Call Now
+                </a>
+            </div>
+            
+            <div class="contact-card">
+                <i class="fab fa-whatsapp"></i>
+                <h3>WhatsApp</h3>
+                <p>+254 718 611 236</p>
+                <p style="margin-top: 15px; font-size: 14px;">Message us anytime for quick responses, appointment bookings, or dental questions.</p>
+                <a href="https://wa.me/254718611236" class="btn btn-whatsapp" style="margin-top: 20px;">
+                    <i class="fab fa-whatsapp" style="margin-right: 8px;"></i> Message on WhatsApp
+                </a>
+            </div>
+            
+            <div class="contact-card">
+                <i class="fas fa-envelope"></i>
+                <h3>Email Us</h3>
+                <p>General Inquiries: nivalidental@gmail.com<br>Appointments: appointments@nivalidental.com</p>
+                <p style="margin-top: 15px; font-size: 14px;">We respond to emails within 24 hours on business days.</p>
+                <a href="mailto:nivalidental@gmail.com" class="btn" style="margin-top: 20px;">
+                    <i class="fas fa-envelope" style="margin-right: 8px;"></i> Send Email
+                </a>
+            </div>
+        </div>
+            
+            <!-- Contact Form -->
+            <div style="margin-top: 80px;">
+                <div class="section-title">
+                    <h2>Send Us a Message</h2>
+                    <p>Fill out the form below and we'll get back to you as soon as possible.</p>
+                </div>
+                
+                <div class="booking-form">
+                    <form id="contactForm">
+                        <div class="form-row">
+                            <div class="form-group">
+                                <label for="contactName">Full Name *</label>
+                                <input type="text" id="contactName" class="form-control" placeholder="Your full name" required>
+                            </div>
+                            <div class="form-group">
+                                <label for="contactEmail">Email Address *</label>
+                                <input type="email" id="contactEmail" class="form-control" placeholder="Your email address" required>
+                            </div>
+                        </div>
+                        
+                        <div class="form-group">
+                            <label for="contactPhone">Phone Number</label>
+                            <input type="tel" id="contactPhone" class="form-control" placeholder="Your phone number">
+                        </div>
+                        
+                        <div class="form-group">
+                            <label for="contactSubject">Subject *</label>
+                            <select id="contactSubject" class="form-control" required>
+                                <option value="">Select a subject</option>
+                                <option value="appointment">Book an Appointment</option>
+                                <option value="general">General Inquiry</option>
+                                <option value="billing">Billing Question</option>
+                                <option value="emergency">Emergency Concern</option>
+                                <option value="feedback">Feedback/Suggestion</option>
+                                <option value="career">Career Opportunity</option>
+                                <option value="other">Other</option>
+                            </select>
+                        </div>
+                        
+                        <div class="form-group">
+                            <label for="contactMessage">Message *</label>
+                            <textarea id="contactMessage" class="form-control" rows="6" placeholder="Your message..." required></textarea>
+                        </div>
+                        
+                        <button type="submit" class="btn" style="width: 100%;">
+                            <i class="fas fa-paper-plane" style="margin-right: 8px;"></i> Send Message via WhatsApp
+                        </button>
+                    </form>
+                </div>
+            </div>
+            
+            <!-- Location & Hours -->
+ <!-- Location Details -->
+<div style="margin-top: 80px;">
+    <div class="section-title">
+        <h2>Find Our Clinic</h2>
+        <p>Visit our modern dental clinic at Total Energies Petrol Station in Ruaraka</p>
+    </div>
+    
+    <div style="background-color: var(--light); padding: 30px; border-radius: var(--radius);">
+        <div style="display: grid; grid-template-columns: 1fr 2fr; gap: 30px;">
+            <div>
+                <h3 style="margin-bottom: 20px;">Exact Location Details</h3>
+                <p><strong>Building:</strong> Total Energies Petrol Station, Ruaraka</p>
+                <p><strong>Landmark:</strong> Directly opposite Safari Park Hotel</p>
+                <p><strong>Road:</strong> Thika Road (main highway)</p>
+                <p><strong>Floor:</strong> 1st Floor, Room F14</p>
+                
+                <div style="margin-top: 25px;">
+                    <h4><i class="fas fa-car" style="color: var(--primary); margin-right: 10px;"></i> Parking & Access</h4>
+                    <p>Ample parking available at the petrol station. Use the main entrance and take the stairs or elevator to the 1st floor.</p>
+                </div>
+                
+                <div style="margin-top: 25px;">
+                    <h4><i class="fas fa-bus" style="color: var(--secondary); margin-right: 10px;"></i> Public Transport</h4>
+                    <p>Matatus to Ruaraka, Githurai, Kahawa West. Alight at Safari Park Hotel bus stop. Cross to Total Energies.</p>
+                </div>
+                
+                <div style="margin-top: 25px;">
+                    <h4><i class="fas fa-wheelchair" style="color: var(--dark); margin-right: 10px;"></i> Accessibility</h4>
+                    <p>Elevator available for easy access to the 1st floor. Wheelchair accessible.</p>
+                </div>
+                
+                <div style="margin-top: 30px;">
+                    <a href="booking.html" class="btn">Book an Appointment</a>
+                </div>
+            </div>
+            
+            <!-- Google Maps Embed -->
+            <div>
+                <div style="background-color: var(--white); border-radius: var(--radius); height: 100%; display: flex; flex-direction: column;">
+                    <div style="flex: 1; border-radius: var(--radius); overflow: hidden;">
+                        <iframe 
+                            src="https://www.google.com/maps/embed?pb=!1m18!1m12!1m3!1d3988.904165642424!2d36.876661974597294!3d-1.2174908355660322!2m3!1f0!2f0!3f0!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0x182f17133f5d37a1%3A0xa7cac01fa09a5b3d!2sSafari%20Park%20Hotel!5e0!3m2!1sen!2ske!4v1690285678906!5m2!1sen!2ske" 
+                            width="100%" 
+                            height="100%" 
+                            style="border:0;" 
+                            allowfullscreen="" 
+                            loading="lazy" 
+                            referrerpolicy="no-referrer-when-downgrade">
+                        </iframe>
+                    </div>
+                    <div style="padding: 20px; text-align: center;">
+                        <h4>Total Energies Petrol Station, Ruaraka</h4>
+                        <p style="color: var(--gray); margin-top: 10px; font-size: 14px;">
+                            <i class="fas fa-info-circle"></i> We're located in the Total Energies building opposite Safari Park Hotel
+                        </p>
+                        <a href="https://goo.gl/maps/SafariParkHotelRuaraka" target="_blank" class="btn" style="margin-top: 15px;">
+                            <i class="fas fa-map" style="margin-right: 8px;"></i> Open in Google Maps
+                        </a>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </div>
+</div>
+<!-- How to Find Us -->
+<div style="margin-top: 50px; padding: 40px; background: linear-gradient(135deg, var(--primary) 0%, var(--secondary) 100%); border-radius: var(--radius); color: white;">
+    <h3 style="text-align: center; margin-bottom: 30px; color: white;"><i class="fas fa-compass"></i> How to Find Us</h3>
+    <div style="display: grid; grid-template-columns: repeat(auto-fit, minmax(250px, 1fr)); gap: 25px; text-align: center;">
+        <div>
+            <div class="service-icon" style="margin: 0 auto 15px; background-color: rgba(255,255,255,0.2);">
+                <i class="fas fa-car" style="color: white;"></i>
+            </div>
+            <h4 style="color: white;">By Car</h4>
+            <p>Drive along Thika Road towards Ruaraka. Look for Safari Park Hotel on your left. We're directly opposite in the Total Energies building.</p>
+        </div>
+        
+        <div>
+            <div class="service-icon" style="margin: 0 auto 15px; background-color: rgba(255,255,255,0.2);">
+                <i class="fas fa-bus" style="color: white;"></i>
+            </div>
+            <h4 style="color: white;">By Matatu</h4>
+            <p>Take any matatu going to Ruaraka, Githurai, or Kahawa West. Alight at Safari Park Hotel bus stop. Cross the road to Total Energies.</p>
+        </div>
+        
+        <div>
+            <div class="service-icon" style="margin: 0 auto 15px; background-color: rgba(255,255,255,0.2);">
+                <i class="fas fa-walking" style="color: white;"></i>
+            </div>
+            <h4 style="color: white;">On Foot</h4>
+            <p>From Safari Park Hotel main gate, use the footbridge to cross Thika Road. Enter Total Energies compound and go to 1st floor, Room F14.</p>
+        </div>
+        
+        <div>
+            <div class="service-icon" style="margin: 0 auto 15px; background-color: rgba(255,255,255,0.2);">
+                <i class="fas fa-taxi" style="color: white;"></i>
+            </div>
+            <h4 style="color: white;">By Taxi/Uber</h4>
+            <p>Set destination to "Total Energies, Ruaraka, opposite Safari Park Hotel". The clinic is on the 1st floor of the petrol station building.</p>
+        </div>
+    </div>
+</div>
+            <!-- FAQ Section -->
+            <div style="margin-top: 80px;">
+                <div class="section-title">
+                    <h2>Frequently Asked Questions</h2>
+                    <p>Quick answers to common questions about our clinic</p>
+                </div>
+                
+                <div style="background-color: var(--light); padding: 30px; border-radius: var(--radius);">
+                    <div style="display: grid; grid-template-columns: repeat(auto-fit, minmax(300px, 1fr)); gap: 20px;">
+                        <div>
+                            <h4><i class="fas fa-question-circle" style="color: var(--primary); margin-right: 10px;"></i> Do you accept insurance?</h4>
+                            <p style="margin-top: 10px; color: var(--gray);">Yes, we work with most major insurance providers. Please bring your insurance card to your appointment.</p>
+                        </div>
+                        
+                        <div>
+                            <h4><i class="fas fa-question-circle" style="color: var(--primary); margin-right: 10px;"></i> What is your cancellation policy?</h4>
+                            <p style="margin-top: 10px; color: var(--gray);">We require 24 hours notice for cancellations. Late cancellations may incur a fee.</p>
+                        </div>
+                        
+                        <div>
+                            <h4><i class="fas fa-question-circle" style="color: var(--primary); margin-right: 10px;"></i> Do you offer payment plans?</h4>
+                            <p style="margin-top: 10px; color: var(--gray);">Yes, we offer flexible payment plans for major treatments. Discuss options during your consultation.</p>
+                        </div>
+                        
+                        <div>
+                            <h4><i class="fas fa-question-circle" style="color: var(--primary); margin-right: 10px;"></i> How do I prepare for my first visit?</h4>
+                            <p style="margin-top: 10px; color: var(--gray);">Bring your ID, insurance card, list of medications, and any previous dental records.</p>
+                        </div>
+                    </div>
+                    
+                    <div style="text-align: center; margin-top: 30px;">
+                        <a href="booking.html" class="btn">Book Your First Visit</a>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- Footer -->
+    <footer>
+        <div class="container">
+            <div class="footer-container">
+                <div class="footer-col">
+                    <a href="index.html" class="logo" style="margin-bottom: 20px; display: inline-flex;">
+                        <div class="logo-icon">
+                            <i class="fas fa-tooth"></i>
+                        </div>
+                        <div class="logo-text">Nivali<span>Dental</span></div>
+                    </a>
+                    <p>Providing exceptional dental care with cutting-edge 2026 technology. Serving the community since 2018.</p>
+                </div>
+                
+                <div class="footer-col">
+                    <h3>Quick Links</h3>
+                    <ul>
+                        <li><a href="index.html">Home</a></li>
+                        <li><a href="services.html">Our Services</a></li>
+                        <li><a href="dentists.html">Our Team</a></li>
+                        <li><a href="booking.html">Book Appointment</a></li>
+                        <li><a href="contact.html">Contact Us</a></li>
+                    </ul>
+                </div>
+                
+                <div class="footer-col">
+                    <h3>Contact Info</h3>
+                    <ul class="contact-info-list">
+                        <li>
+                            <i class="fas fa-map-marker-alt"></i>
+                            <span>Ruaraka, total inergies opposite Safari park hotel, 1<sup>st</sup>floor room f14</span>
+                        </li>
+                        <li>
+                            <i class="fas fa-phone"></i>
+                            <span>(254) 718 611 236</span>
+                        </li>
+                        <li>
+                            <i class="fas fa-envelope"></i>
+                            <span>nivalidental@gmail.com</span>
+                        </li>
+                        <li>
+                            <i class="fab fa-whatsapp"></i>
+                            <span>+254 718 611 236</span>
+                        </li>
+                    </ul>
+                </div>
+            </div>
+            
+            <div class="copyright">
+                <sub>&copy; <span class="current-year">2026</span> Nivali Dental Clinic. <sub>built by Kipkoech Emmanuel 254117702463</sub>. All rights reserved. Established 2018.</p>
+            </div>
+        </div>
+    </footer>
+
+    <!-- WhatsApp Floating Button -->
+    <a href="https://wa.me/254718611236" class="whatsapp-float" target="_blank">
+        <i class="fab fa-whatsapp"></i>
+    </a>
+
+    <!-- Admin Access Button (Floating - Only for Admins) -->
+    <div class="admin-access-btn" id="adminAccessBtn" title="Admin Access">
+        <i class="fas fa-user-shield"></i>
+    </div>
+
+    <script src="script.js"></script>
+    <script>
+        // Contact form submission
+        document.getElementById('contactForm')?.addEventListener('submit', function(e) {
+            e.preventDefault();
+            
+            // Get form values
+            const name = document.getElementById('contactName').value;
+            const email = document.getElementById('contactEmail').value;
+            const phone = document.getElementById('contactPhone').value || 'Not provided';
+            const subject = document.getElementById('contactSubject').options[document.getElementById('contactSubject').selectedIndex].text;
+            const message = document.getElementById('contactMessage').value;
+            
+            // Prepare WhatsApp message
+            const whatsappMessage = `Hello! I have a message for Nivali Dental Clinic.%0A%0AName: ${name}%0AEmail: ${email}%0APhone: ${phone}%0ASubject: ${subject}%0AMessage: ${message}`;
+            
+            // Open WhatsApp with pre-filled message
+            window.open(`https://wa.me/254718611236?text=${whatsappMessage}`, '_blank');
+            
+            // Show confirmation message
+            alert('Thank you for your message! You are being redirected to WhatsApp to send your inquiry.');
+            
+            // Reset form
+            document.getElementById('contactForm').reset();
+        });
+        
+        // Set current year in footer
+        document.addEventListener('DOMContentLoaded', function() {
+            document.querySelectorAll('.current-year').forEach(element => {
+                element.textContent = '2026';
+            });
+        });
+    </script>
+</body>
+</html>

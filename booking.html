@@ -1,0 +1,293 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Book Appointment - Nivali Dental Clinic 2026</title>
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.0/css/all.min.css">
+    <link href="https://fonts.googleapis.com/css2?family=Poppins:wght@300;400;500;600;700&family=Open+Sans:wght@300;400;600&display=swap" rel="stylesheet">
+    <link rel="stylesheet" href="style.css">
+</head>
+<body>
+    <!-- Header -->
+    <header>
+        <div class="container header-container">
+            <a href="index.html" class="logo">
+                <div class="logo-icon">
+                    <i class="fas fa-tooth"></i>
+                </div>
+                <div class="logo-text">Nivali<span>Dental</span></div>
+            </a>
+            
+            <button class="mobile-menu-btn" id="mobileMenuBtn">
+                <i class="fas fa-bars"></i>
+            </button>
+            
+            <nav class="desktop-nav">
+                <ul>
+                    <li><a href="index.html">Home</a></li>
+                    <li><a href="services.html">Services</a></li>
+                    <li><a href="dentists.html">Our Team</a></li>
+                    <li><a href="booking.html" class="active">Book Appointment</a></li>
+                    <li><a href="contact.html">Contact</a></li>
+                    <li><a href="booking.html" class="nav-cta">Book Now</a></li>
+                </ul>
+            </nav>
+        </div>
+        
+        <div class="mobile-menu" id="mobileMenu">
+            <ul>
+                <li><a href="index.html">Home</a></li>
+                <li><a href="services.html">Services</a></li>
+                <li><a href="dentists.html">Our Team</a></li>
+                <li><a href="booking.html" class="active">Book Appointment</a></li>
+                <li><a href="contact.html">Contact</a></li>
+                <li><a href="booking.html" class="nav-cta">Book Now</a></li>
+            </ul>
+        </div>
+    </header>
+
+    <!-- Page Hero -->
+    <section class="hero" style="padding: 100px 0 60px;">
+        <div class="container">
+            <div class="hero-content" style="text-align: center; max-width: 800px; margin: 0 auto;">
+                <h1>Book Your Dental Appointment</h1>
+                <p>Schedule your visit with our experienced dental team using our 2026 booking system. We offer flexible appointment times to fit your busy schedule.</p>
+            </div>
+        </div>
+    </section>
+
+    <!-- Booking Section -->
+    <section class="section">
+        <div class="container">
+            <div class="booking-form">
+                <h2 style="text-align: center; margin-bottom: 10px;">Appointment Request Form</h2>
+                <p style="text-align: center; color: var(--gray); margin-bottom: 30px;">Fill out the form below and we'll confirm your appointment via WhatsApp within 30 minutes.</p>
+                
+                <div id="alertMessage" class="alert" style="display: none;"></div>
+                
+                <form id="mainBookingForm">
+                    <div class="form-row">
+                        <div class="form-group">
+                            <label for="mainName">Full Name *</label>
+                            <input type="text" id="mainName" class="form-control" placeholder="Your full name" required>
+                        </div>
+                        <div class="form-group">
+                            <label for="mainEmail">Email Address *</label>
+                            <input type="email" id="mainEmail" class="form-control" placeholder="Your email address" required>
+                        </div>
+                    </div>
+                    
+                    <div class="form-row">
+                        <div class="form-group">
+                            <label for="mainPhone">Phone Number *</label>
+                            <input type="tel" id="mainPhone" class="form-control" placeholder="Your phone number (WhatsApp preferred)" required>
+                        </div>
+                        <div class="form-group">
+                            <label for="mainAge">Age</label>
+                            <input type="number" id="mainAge" class="form-control" placeholder="Your age" min="1" max="120">
+                        </div>
+                    </div>
+                    
+                    <div class="form-group">
+                        <label for="mainService">Service Required *</label>
+                        <select id="mainService" class="form-control" required>
+                            <option value="">Select a service</option>
+                            <option value="ai-checkup">AI-Assisted Checkup (New 2026)</option>
+                            <option value="general-checkup">General Checkup & Cleaning</option>
+                            <option value="teeth-cleaning">Advanced Teeth Cleaning</option>
+                            <option value="teeth-whitening">Laser Teeth Whitening</option>
+                            <option value="dental-fillings">Dental Fillings</option>
+                            <option value="root-canal">Root Canal Treatment</option>
+                            <option value="dental-implants">Dental Implants</option>
+                            <option value="braces">Braces & Orthodontics</option>
+                            <option value="cosmetic">Cosmetic Dentistry</option>
+                            <option value="emergency">Emergency Dental Care</option>
+                            <option value="consultation">Free Consultation</option>
+                        </select>
+                    </div>
+                    
+                    <div class="form-row">
+                        <div class="form-group">
+                            <label for="mainDate">Preferred Date *</label>
+                            <input type="date" id="mainDate" class="form-control" required>
+                        </div>
+                        <div class="form-group">
+                            <label for="mainTime">Preferred Time *</label>
+                            <select id="mainTime" class="form-control" required>
+                                <option value="">Select time</option>
+                                <option value="9:00 AM">9:00 AM</option>
+                                <option value="10:00 AM">10:00 AM</option>
+                                <option value="11:00 AM">11:00 AM</option>
+                                <option value="12:00 PM">12:00 PM</option>
+                                <option value="2:00 PM">2:00 PM</option>
+                                <option value="3:00 PM">3:00 PM</option>
+                                <option value="4:00 PM">4:00 PM</option>
+                                <option value="5:00 PM">5:00 PM</option>
+                                <option value="6:00 PM">6:00 PM (Evening Slot)</option>
+                            </select>
+                        </div>
+                    </div>
+                    
+                    <div class="form-group">
+                        <label for="message">Additional Notes (Optional)</label>
+                        <textarea id="message" class="form-control" rows="4" placeholder="Any specific concerns, symptoms, or requirements. Mention if this is your first visit."></textarea>
+                    </div>
+                    
+                    <div class="form-group" style="margin-top: 30px;">
+                        <button type="submit" class="btn" style="width: 100%; padding: 16px;">
+                            <i class="fab fa-whatsapp" style="margin-right: 10px;"></i> Book Appointment via WhatsApp
+                        </button>
+                        <p style="text-align: center; margin-top: 15px; color: var(--gray); font-size: 14px;">
+                            By clicking "Book Appointment", you'll be redirected to WhatsApp to confirm your appointment details with our team.
+                        </p>
+                    </div>
+                </form>
+            </div>
+            
+            <!-- Appointment Information -->
+      <!-- Appointment Information -->
+<div style="margin-top: 50px; background-color: var(--light); padding: 30px; border-radius: var(--radius);">
+    <h3 style="text-align: center; margin-bottom: 20px;">2026 Clinic Hours & Location</h3>
+    <div style="display: grid; grid-template-columns: repeat(auto-fit, minmax(250px, 1fr)); gap: 30px;">
+        <div>
+            <h4><i class="fas fa-clock" style="color: var(--primary); margin-right: 10px;"></i> Clinic Hours</h4>
+            <ul style="list-style: none; margin-top: 10px;">
+                <li style="display: flex; justify-content: space-between; margin-bottom: 8px; padding-bottom: 8px; border-bottom: 1px solid var(--light-gray);">
+                    <span>Monday - Friday</span>
+                    <span style="font-weight: 600;">8:00 AM - 7:00 PM</span>
+                </li>
+                <li style="display: flex; justify-content: space-between; margin-bottom: 8px; padding-bottom: 8px; border-bottom: 1px solid var(--light-gray);">
+                    <span>Saturday</span>
+                    <span style="font-weight: 600;">9:00 AM - 5:00 PM</span>
+                </li>
+                <li style="display: flex; justify-content: space-between;">
+                    <span>Sunday</span>
+                    <span style="font-weight: 600; color: var(--secondary);">Emergency Only</span>
+                </li>
+            </ul>
+        </div>
+        
+        <div>
+            <h4><i class="fas fa-map-marker-alt" style="color: var(--secondary); margin-right: 10px;"></i> Clinic Location</h4>
+            <p style="margin-top: 10px;">
+                <strong>Total Energies Petrol Station</strong><br>
+                Ruaraka, Opposite Safari Park Hotel<br>
+                Thika Road, 1st Floor, Room F14
+            </p>
+            <a href="contact.html" class="btn" style="margin-top: 15px; width: 100%;">
+                <i class="fas fa-directions"></i> View Directions
+            </a>
+        </div>
+        
+        <div>
+            <h4><i class="fas fa-info-circle" style="color: var(--accent); margin-right: 10px;"></i> What to Bring</h4>
+            <ul style="list-style: none; margin-top: 10px;">
+                <li style="margin-bottom: 8px;"><i class="fas fa-check" style="color: var(--secondary); margin-right: 8px;"></i> Photo ID</li>
+                <li style="margin-bottom: 8px;"><i class="fas fa-check" style="color: var(--secondary); margin-right: 8px;"></i> Insurance card (if applicable)</li>
+                <li style="margin-bottom: 8px;"><i class="fas fa-check" style="color: var(--secondary); margin-right: 8px;"></i> List of medications</li>
+                <li><i class="fas fa-check" style="color: var(--secondary); margin-right: 8px;"></i> Previous dental records</li>
+            </ul>
+        </div>
+    </div>
+</div>
+            
+            <!-- New 2026 Features -->
+            <div style="margin-top: 50px; padding: 40px; background: linear-gradient(135deg, var(--primary) 0%, var(--secondary) 100%); border-radius: var(--radius); color: white;">
+                <h3 style="text-align: center; margin-bottom: 20px; color: white;">2026 Booking Enhancements</h3>
+                <div style="display: grid; grid-template-columns: repeat(auto-fit, minmax(250px, 1fr)); gap: 20px; text-align: center;">
+                    <div>
+                        <div class="service-icon" style="margin: 0 auto 15px; background-color: rgba(255,255,255,0.2);">
+                            <i class="fas fa-bolt" style="color: white;"></i>
+                        </div>
+                        <h4 style="color: white;">30-Minute Confirmation</h4>
+                        <p>Get appointment confirmation within 30 minutes via WhatsApp</p>
+                    </div>
+                    
+                    <div>
+                        <div class="service-icon" style="margin: 0 auto 15px; background-color: rgba(255,255,255,0.2);">
+                            <i class="fas fa-calendar-alt" style="color: white;"></i>
+                        </div>
+                        <h4 style="color: white;">Flexible Scheduling</h4>
+                        <p>Evening and Saturday appointments available</p>
+                    </div>
+                    
+                    <div>
+                        <div class="service-icon" style="margin: 0 auto 15px; background-color: rgba(255,255,255,0.2);">
+                            <i class="fas fa-shield-alt" style="color: white;"></i>
+                        </div>
+                        <h4 style="color: white;">Secure & Private</h4>
+                        <p>Your information is protected with 2026 security standards</p>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- Footer -->
+    <footer>
+        <div class="container">
+            <div class="footer-container">
+                <div class="footer-col">
+                    <a href="index.html" class="logo" style="margin-bottom: 20px; display: inline-flex;">
+                        <div class="logo-icon">
+                            <i class="fas fa-tooth"></i>
+                        </div>
+                        <div class="logo-text">Nivali<span>Dental</span></div>
+                    </a>
+                    <p>Providing exceptional dental care with cutting-edge 2026 technology. Serving the community since 2018.</p>
+                </div>
+                
+                <div class="footer-col">
+                    <h3>Quick Links</h3>
+                    <ul>
+                        <li><a href="index.html">Home</a></li>
+                        <li><a href="services.html">Our Services</a></li>
+                        <li><a href="dentists.html">Our Team</a></li>
+                        <li><a href="booking.html">Book Appointment</a></li>
+                        <li><a href="contact.html">Contact Us</a></li>
+                    </ul>
+                </div>
+                
+                <div class="footer-col">
+                    <h3>Contact Info</h3>
+                    <ul class="contact-info-list">
+                        <li>
+                            <i class="fas fa-map-marker-alt"></i>
+                            <span>Ruaraka Totaal energies, opposite safarpark hotel, Thika road, 1<sup>st</sup>floor room f14</span>
+                        </li>
+                        <li>
+                            <i class="fas fa-phone"></i>
+                            <span>(254) 718-611236</span>
+                        </li>
+                        <li>
+                            <i class="fas fa-envelope"></i>
+                            <span>nivalidental@gmail.com</span>
+                        </li>
+                        <li>
+                            <i class="fab fa-whatsapp"></i>
+                            <span>+254 718 611 236</span>
+                        </li>
+                    </ul>
+                </div>
+            </div>
+            
+            <div class="copyright">
+                <p>&copy; <span class="current-year">2026</span> Nivali Dental Clinic. All rights reserved. Established 2018.</p>
+            </div>
+        </div>
+    </footer>
+
+    <!-- WhatsApp Floating Button -->
+    <a href="https://wa.me/254718611236" class="whatsapp-float" target="_blank">
+        <i class="fab fa-whatsapp"></i>
+    </a>
+
+    <!-- Admin Access Button (Floating - Only for Admins) -->
+    <div class="admin-access-btn" id="adminAccessBtn" title="Admin Access">
+        <i class="fas fa-user-shield"></i>
+    </div>
+
+    <script src="script.js"></script>
+</body>
+</html>

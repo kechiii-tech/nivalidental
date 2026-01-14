@@ -1,0 +1,146 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Our Dental Team - Nivali Dental Clinic 2026</title>
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.0/css/all.min.css">
+    <link href="https://fonts.googleapis.com/css2?family=Poppins:wght@300;400;500;600;700&family=Open+Sans:wght@300;400;600&display=swap" rel="stylesheet">
+    <link rel="stylesheet" href="style.css">
+</head>
+<body>
+    <!-- Header -->
+    <header>
+        <div class="container header-container">
+            <a href="index.html" class="logo">
+                <div class="logo-icon">
+                    <i class="fas fa-tooth"></i>
+                </div>
+                <div class="logo-text">Nivali<span>Dental</span></div>
+            </a>
+            
+            <button class="mobile-menu-btn" id="mobileMenuBtn">
+                <i class="fas fa-bars"></i>
+            </button>
+            
+            <nav class="desktop-nav">
+                <ul>
+                    <li><a href="index.html">Home</a></li>
+                    <li><a href="services.html">Services</a></li>
+                    <li><a href="dentists.html" class="active">Our Team</a></li>
+                    <li><a href="booking.html">Book Appointment</a></li>
+                    <li><a href="contact.html">Contact</a></li>
+                    <li><a href="booking.html" class="nav-cta">Book Now</a></li>
+                </ul>
+            </nav>
+        </div>
+        
+        <div class="mobile-menu" id="mobileMenu">
+            <ul>
+                <li><a href="index.html">Home</a></li>
+                <li><a href="services.html">Services</a></li>
+                <li><a href="dentists.html" class="active">Our Team</a></li>
+                <li><a href="booking.html">Book Appointment</a></li>
+                <li><a href="contact.html">Contact</a></li>
+                <li><a href="booking.html" class="nav-cta">Book Now</a></li>
+            </ul>
+        </div>
+    </header>
+
+    <!-- Page Hero -->
+    <section class="hero" style="padding: 100px 0 60px;">
+        <div class="container">
+            <div class="hero-content" style="text-align: center; max-width: 800px; margin: 0 auto;">
+                <h1>Our 2026 Dental Team</h1>
+                <p>Meet our team of experienced dental professionals dedicated to providing you with compassionate, personalized care using the latest 2026 dental technology.</p>
+            </div>
+        </div>
+    </section>
+
+    <!-- Dentists Grid (Public View) -->
+    <section class="section">
+        <div class="container">
+            <div id="dentistsGrid" class="dentists-grid">
+                <!-- Staff members loaded from localStorage -->
+                <div style="grid-column: 1 / -1; text-align: center; padding: 40px;">
+                    <i class="fas fa-users" style="font-size: 60px; color: var(--gray); margin-bottom: 20px;"></i>
+                    <h3>Our Dental Team</h3>
+                    <p>Our team of experienced dental professionals will be displayed here.</p>
+                    <p style="margin-top: 10px; color: var(--gray);">Staff information is managed by clinic administration.</p>
+                </div>
+            </div>
+            
+            <div style="text-align: center; margin-top: 50px;">
+                <a href="booking.html" class="btn">Book with Our Team</a>
+                <p style="margin-top: 20px; color: var(--gray);">Interested in joining our team? <a href="contact.html" style="color: var(--primary);">Contact us about career opportunities!</a></p>
+            </div>
+        </div>
+    </section>
+
+    <!-- Footer -->
+    <footer>
+        <div class="container">
+            <div class="footer-container">
+                <div class="footer-col">
+                    <a href="index.html" class="logo" style="margin-bottom: 20px; display: inline-flex;">
+                        <div class="logo-icon">
+                            <i class="fas fa-tooth"></i>
+                        </div>
+                        <div class="logo-text">Nivali<span>Dental</span></div>
+                    </a>
+                    <p>Providing exceptional dental care with cutting-edge 2026 technology. Serving the community since 2018.</p>
+                </div>
+                
+                <div class="footer-col">
+                    <h3>Quick Links</h3>
+                    <ul>
+                        <li><a href="index.html">Home</a></li>
+                        <li><a href="services.html">Our Services</a></li>
+                        <li><a href="dentists.html">Our Team</a></li>
+                        <li><a href="booking.html">Book Appointment</a></li>
+                        <li><a href="contact.html">Contact Us</a></li>
+                    </ul>
+                </div>
+                
+                <div class="footer-col">
+                    <h3>Contact Info</h3>
+                    <ul class="contact-info-list">
+                        <li>
+                            <i class="fas fa-map-marker-alt"></i>
+                            <span>Ruakraka, total energies, opposite Safari walk Hotel</span>
+                        </li>
+                        <li>
+                            <i class="fas fa-phone"></i>
+                            <span>(254) 718 611 236</span>
+                        </li>
+                        <li>
+                            <i class="fas fa-envelope"></i>
+                            <span>nivalidental@gmail.com</span>
+                        </li>
+                        <li>
+                            <i class="fab fa-whatsapp"></i>
+                            <span>+254 718 611 236</span>
+                        </li>
+                    </ul>
+                </div>
+            </div>
+            
+            <div class="copyright">
+                <p>&copy; <span class="current-year">2026</span> Nivali Dental Clinic. All rights reserved. Established 2018.</p>
+            </div>
+        </div>
+    </footer>
+
+    <!-- WhatsApp Floating Button -->
+    <a href="https://wa.me/254718611236" class="whatsapp-float" target="_blank">
+        <i class="fab fa-whatsapp"></i>
+    </a>
+
+    <!-- Admin Access Button (Floating - Only for Admins) -->
+    <div class="admin-access-btn" id="adminAccessBtn" title="Admin Access">
+        <i class="fas fa-user-shield"></i>
+    </div>
+
+    <script src="script.js"></script>
+</body>
+</html>
